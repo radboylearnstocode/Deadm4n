@@ -1,0 +1,103 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hi, Let me know if there's anything else I can do for you", "Good to see you again, how can I be of service today ?", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["Hope you were satisfied with our service","Hope you found what you were looking for!", " See you, have a nice day", "Bye! Come back again soon, Happy Shopping !"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [""],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through product list, offers and possible locations on where to buy the products cheaply", "Offering support for product lists, offers and best locations on where to buy the products cheaply"],
+         "context": [""]
+        },
+        {"tag": "product_details",
+         "patterns": ["What are the various products that you sell?", "Open the product list", "Give me a list of products", "List all products suitable for me", "What are the best products you have?", "what can i buy from you?","what can you sell me today", "Tell me more about the products that you have" ],
+         "responses": ["Here are some of things you maybe interested in: ","I hope these items will make you buy them: ","Hope you find what you are looking for in these:"],
+         "context": ["display_list_of_products_20"]
+        },
+        {"tag": "display_list_of_products_20",
+         "patterns": [],
+         "responses": ["# table needs to be defined here"], 
+         "context": [""]
+        },
+        {"tag": "product_details2",
+        "patterns": ["what else do you have", "I am not interested in these ones, show me more", "can you show me more", "do you have anything else","what else can you sell me today", "Tell me more about some other products that you have" ],
+        "responses": ["Do you want to search for a product","Is there something you are looking for","please define what exactly you are looking for"],
+        "context": ["product_search_type"]
+        },
+        {"tag": "product_search_type",
+         "patterns": ["I want to search for a product", "I want to look for another product", "Load this product result", "Show product results starting with", "Find product results by name" ],
+         "responses": ["Please provide the mode of search,i.e.,Product name or price or a description: "],
+         "context": ["search_by_product_name","search_product_by_price","search_product_by_description"]
+        },
+        {"tag": "search_product_by_name",
+         "patterns": ["Product name","Name"],
+         "responses": ["Please enter the name of the product,you are looking for: "],
+         "context": ["search_product_by_given_name"]
+        },
+        {"tag": "search_product_by_given_name",
+        "patterns": [],
+        "responses": ["Loading product details"],
+        "context": [""]
+        },
+        {"tag": "search_product_by_price",
+        "patterns": ["Product price","Price"],
+        "responses": ["Please enter the maximum budget that you can spend: "],
+        "context": ["search_product_by_given_price"]
+        },
+        {"tag": "search_product_by_given_price",
+        "patterns": [],
+        "responses": ["Loading product details"],
+        "context": [""]
+        },
+        {"tag": "search_product_by_description",
+        "patterns": ["Product description","Description"],
+        "responses": ["Please enter the description of the product,you are looking for: "],
+        "context": ["search_product_by_given_description"]
+        },
+        {"tag": "search_product_by_given_description",
+        "patterns": [],
+        "responses": ["Loading product details"],
+        "context": [""]
+        },
+        {"tag": "store_search",
+         "patterns": ["Lookup for Stores nearby", "Searching for nearby stores", "I want to search stores nearby", "Stores that sell products nearby", "Looking up store details","Want to search for a specific store","Lookup for Shops nearby", "Searching for nearby shops", "I want to search shops nearby", "Shops that sell products nearby", "Looking up shop details","Want to search for a specific shop" ],
+         "responses": ["Please provide the mode of search,i.e., store/shop name or landmark","how do you you want to search for the store/shop,i.e., store/shop name or landmark"],
+         "context": ["search_store_by_location","search_store_by_name"]
+        },
+        {"tag": "search_store_by_name",
+         "patterns": ["Store name"],
+         "responses": ["Please enter the name of the store/shop,you are looking for: "],
+         "context": ["search_store_by_given_name"]
+        },
+        {"tag": "search_store_by_given_name",
+         "patterns": [],
+         "responses": ["Loading store details"],
+         "context": [""]
+        },
+        {"tag": "search_store_by_location",
+        "patterns": ["Store Landmark","Landmark"],
+        "responses": ["Please enter the nearest landmark of the store/shop,you are looking for: "],
+        "context": ["search_store_by_given_landmark"]
+        },
+        {"tag": "search_store_by_given_landmark",
+        "patterns": [],
+        "responses": ["Loading store details"],
+        "context": [""]
+        }
+   ]
+}
